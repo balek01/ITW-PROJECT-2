@@ -37,10 +37,11 @@ function isBottomReached() {
 async function revealNextRow() {
   const rows = document.querySelectorAll('.row');
   if (nextRowIndex < rows.length) {
-    if (nextRowIndex === 1) {
+    if (nextRowIndex === 2) {
       document.dispatchEvent(new Event('startNumbers')); // when row with numbers is displayed trigger event to start numbers animation
     }
-    if (nextRowIndex === 2) {
+    if (nextRowIndex === 1) {
+     
       document.dispatchEvent(new Event('startCollapse')); // when row with collapse is displayed trigger event to start collapse
     }
     // Reveal the next row
