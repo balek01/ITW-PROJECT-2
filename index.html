@@ -6,26 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="js/scrollspy.js"></script>
+    <script src="js/numbers.js "></script>
+    <script src="js/collapse.js"></script>
+    <script src="js/text.js"></script>
     <title>Bob the Builder</title>
 </head>
 
 <body>
+    <div id="menu">
+        <nav>
+            <ul>
+                <li><a class="menu-link" href="#about" data-row-index="1">About</a></li>
+                <li><a class="menu-link" href="#reviews" data-row-index="1">Reviews</a></li>
+                <li><a class="menu-link" href="#experience" data-row-index="2">Experience</a></li>
+                <li><a class="menu-link" href="#team" data-row-index="2">Team</a></li>
+                <li><a class="menu-link" href="#contact" data-row-index="3">Contact us</a></li>
+            </ul>
+        </nav>
+    </div>
     <section id="main" class="main-bg">
         <div class="main-card">
-            <div id="menu">
-                <nav>
-                    <ul>
-                        <li><a href="#main">Hello</a></li>
-                        <li><a href="#main">Hi</a></li>
-                        <li><a href="#main">Lorem</a></li>
-                        <li><a href="#main">Ipsum</a></li>
-                    </ul>
-                </nav>
-            </div>
+
             <div class="content secondary-bg">
                 <div class="main-left secondary-bg">
                     <h1>Bob the Builder</h1>
-                    <h2>We can fix it</h2>
+                    <h2 id="typewriter">We can</h2>
                 </div>
                 <div class="main-right">
                     <img id="bob" src="images/bob.png" alt="bobthebuilderimage">
@@ -33,24 +40,196 @@
             </div>
         </div>
     </section>
-    <section class="card-section">
+    <section id="card-section">
         <div class="row">
-            <div class="card" style="--n: 1;">
-                Card 1 content
+            <div class="card" id="reviews" style="--x: 1; --y: 1.5;">
+
+                <div class="title">
+                    <h1>Can we fix it?</h1>
+                    <h2>Yes we can!</h2>
+                </div>
+                <div class="reviews">
+                    <span>4.7</span>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+
+                </div>
+                <div>
+                    <p> Bob's not just any builder, he's the guy you want on your team when things need fixing or
+                        building. With his trusty tools and upbeat attitude, Bob makes every project an adventure.
+                        Hanging out with Bob feels like anything is possible.</p>
+                </div>
             </div>
-            <div class="card" style="--n: 1;">
-                Card 2 content
+            <div class="card" id="about" style="--x: -1; --y: 1;">
+                <div class="title">
+                    <h1>About Bob</h1>
+                    <h2>The absolute unit</h2>
+                </div>
+                <div class="sub-title">
+                    <h1>Certification</h1>
+                </div>
+                <div class="cerf">
+                    <div class="cerf-item">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <div class="container">
+                            <p class="degree">Architect Engineer</p>
+                            <p>Sunflower University</p>
+                        </div>
+                    </div>
+                    <div class="cerf-item">
+                        <i class="fa-solid fa-scroll"></i>
+                        <div class="container">
+                            <p class="degree">Ceritfied demoliton man</p>
+                            <p> Bobsville</p>
+                            <p>Demolishers</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="card" style="--n: 2;">
-                Card 3 content
+            <div class="card" id="team" style="--x: 1; --y: 3;">
+                <div class="title">
+                    <h1>The team</h1>
+                </div>
+                <div class="colapse-item">
+                    <button class="collapse"><i class="fa-solid fa-chevron-down"></i>Lofty</button>
+                    <div class="collapse-content" style="display: block;"> <!-- not great way, is is for js -->
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, esse. Illo et nobis earum
+                        voluptatem soluta cumque enim aperiam debitis in, iure quidem non nemo quos possimus. Dolores,
+                        praesentium rem!
+                    </div>
+                </div>
+                <div class="colapse-item">
+                    <button class="collapse"><i class="fa-solid fa-chevron-right"></i>Scoop</button>
+                    <div class="collapse-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quae in neque deserunt repellendus
+                        praesentium vel labore. Obcaecati, omnis doloribus provident nobis beatae placeat quaerat magnam
+                        exercitationem ullam laboriosam cum?
+                    </div>
+                </div>
+
+                <div class="colapse-item">
+                    <button class="collapse"><i class="fa-solid fa-chevron-right"></i>Wendy</button>
+                    <div class="collapse-content">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur ad odit dicta minus eveniet
+                        obcaecati architecto odio culpa ea temporibus vitae id rerum, sequi inventore sint
+                        reprehenderit, doloribus voluptates rem.
+                    </div>
+                </div>
+
             </div>
-            <div class="card" style="--n: -1;">
-                Card 4 content
+            <div id="experience" class="card" style="--x: 2; --y: -7;">
+                <div class="title">
+                    <h1>Bob has experience</h1>
+                    <p>Bob has been in the business for over 20 years</p>
+                    <p>And has expirience in all kind of stuff</p>
+                </div>
+                <div id="experience-content">
+                    <div class="experience-item">
+                        <div class="experience-icon">
+                            <i class="fa-solid fa-hammer"></i>
+                        </div>
+                        <div class="container">
+                            <p>Building</p>
+                            <p>stuff</p>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-icon">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <div class="container">
+                            <p>Repairing</p>
+                            <p>stuff</p>
+
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-icon">
+                            <i class="fa-solid fa-vest"></i>
+                        </div>
+                        <div class="container">
+                            <p>Demolishing</p>
+                            <p>stuff</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card" id="contact" style="--x: -5; --y: 4.5;">
+                <div class="title">
+                    <h1>Contact us</h1>
+                    <p>Bob will dive into it right now!</p>
+
+                </div>
+                <div id="contact-content">
+                    <form action="" method="post">
+                        <div class="form-item">
+                            <label for="name">Name</label>
+                            <input id="name" placeholder="Bob">
+                        </div>
+                        <div class="form-item">
+                            <label for="surname">Surname</label>
+                            <input id="surname" placeholder="Builder">
+                        </div>
+                        <div class="form-item">
+                            <label for="email">Email</label>
+                            <input id="email" placeholder="bob.builder@builder.bob">
+                        </div>
+                        <div class="form-item">
+                            <label for="surname">What do you need help with?</label>
+                            <textarea id="surname" placeholder="Spud is being.."></textarea>
+                        </div>
+                        <div class="form-item">
+                            <button>Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="counter" class="card" style="--x: 0; --y: -14;">
+                <div class="title">
+                    <h1>Still counting</h1>
+                </div>
+                <div class="counter-content">
+                    <div class="counter-item">
+                        <div class="counter-icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="counter-container">
+                            <p>Happy</p>
+                            <p>customers</p>
+                            <h2 class="counter">6590</h2>
+                        </div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-icon">
+                            <i class="fa-solid fa-helmet-safety"></i>
+                        </div>
+                        <div class="counter-container">
+                            <p>Finished</p>
+                            <p>projects</p>
+                            <h2 class="counter">1087</h2>
+                        </div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-icon">
+                            <i class="fa-regular fa-calendar-check"></i>
+                        </div>
+                        <div class="counter-container">
+                            <p>Days</p>
+                            <p>saved</p>
+                            <h2 class="counter">250</h2>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
-
 
 </body>

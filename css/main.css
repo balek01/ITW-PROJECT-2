@@ -45,25 +45,25 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   width: 60%;
-  box-shadow: 10px -10px 20px rgba(0, 0, 0, 0.403);
+  box-shadow: -10px -10px 20px rgba(0, 0, 0, 0.403);
 }
 #menu {
-  width: 100%; /* Add this line */
+  width: 100%;
   height: auto;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 #menu nav {
   position: absolute;
-  background-color: transparent;
-  top: 10px;
+  background-color: var(--color-secondary);
+
   width: 100%;
 }
 #menu ul {
-  margin: 0; /* Add this line */
-  padding: 0; /* Add this line */
-  margin-left: 10%;
-  margin-right: 10%;
-  border-bottom: var(--color-white) 1px solid;
+  margin: 0;
+  padding: 0;
+  padding-left: 10%;
 }
 
 #menu li {
@@ -77,8 +77,12 @@ h2 {
   font-weight: 500;
   text-decoration: none;
   color: var(--color-white);
-  border-right: 1px solid var(--color-white);
 }
+
+#menu li:not(:last-child) a {
+  border-right: var(--color-white) 1px solid;
+}
+
 #menu li:first-child {
   padding-left: 1rem;
 }
@@ -90,7 +94,7 @@ h2 {
   height: auto;
 }
 .main-card h1 {
-  margin-top: 8rem;
+  margin-top: 40%;
 }
 .main-left {
   width: 55%;
@@ -111,10 +115,56 @@ h2 {
   color: var(--color-white);
   background-color: var(--color-secondary);
   margin: 0 1rem;
-  padding: 1rem;
+  padding: 3rem;
+}
+.reviews {
+  color: #ffbf00;
+  font-size: 1.5rem;
 }
 .card:nth-child(even) {
   background-color: var(--color-main);
+}
+.card:nth-child(even) h2 {
+  color: var(--color-secondary);
+}
+
+.cerf {
+  width: 70%;
+  text-align: center;
+  padding: 0.5rem;
+  display: flex;
+}
+.cerf i {
+  font-size: 3rem;
+  color: var(--color-secondary);
+}
+#about .title h2 {
+  color: var(--color-white);
+}
+#about .title h1 {
+  color: var(--color-secondary);
+}
+.degree {
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+#about .sub-title h1 {
+  color: var(--color-secondary);
+}
+#about .sub-title {
+  border-bottom: 1px solid var(--color-white);
+  width: 80%;
+}
+
+.cerf-item {
+  display: flex;
+}
+.cerf-item:not(:first-child) {
+  margin-left: 2rem;
+}
+
+.cerf p {
+  margin: 0;
 }
 
 @keyframes slide-right {
@@ -137,6 +187,151 @@ h2 {
   }
 }
 
+#experience {
+  text-align: center;
+}
+#experience p {
+  margin: 0;
+}
+#experience .title p:nth-child(3) {
+  color: var(--color-main);
+}
+#experience .title h1 {
+  margin-bottom: 1rem;
+}
+
+#experience-content {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 2rem;
+}
+.experience-item {
+  position: relative;
+}
+.experience-item .container {
+  padding: 2rem;
+  border: 2px solid var(--color-secondary);
+  background-color: var(--color-main);
+}
+.experience-icon {
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.counter-item i,
+.experience-icon i {
+  padding: 0.8rem;
+  font-size: 2rem;
+  background-color: var(--color-white);
+  color: var(--color-main);
+  border-radius: 20%;
+}
+
+.row:nth-child(2) .card:nth-child(2) {
+  background-color: var(--color-secondary);
+}
+
+#contact .title > p {
+  color: var(--color-main);
+}
+form textarea,
+form input {
+  color: var(--color-white);
+  width: 100%;
+  background-color: var(--color-secondary);
+  border: none;
+  border-bottom: 1px solid var(--color-main);
+  margin-bottom: 0.5rem;
+}
+
+form textarea {
+  max-width: 100%;
+}
+
+form button {
+  margin-top: 2rem;
+  background-color: var(--color-main);
+  color: var(--color-secondary);
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  float: right;
+  font-size: 1rem;
+
+  width: 100%;
+}
+form textarea:focus,
+form input:focus {
+  outline: none;
+}
+
+.collapse {
+  background: var(--color-secondary);
+  border: none;
+  border-bottom: 1px solid var(--color-main);
+  color: var(--color-white);
+  text-align: left;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: bolder;
+  width: 100%;
+  padding: 0.5rem;
+}
+.collapse i {
+  margin-right: 1rem;
+}
+.collapse-content {
+  color: var(--color-white);
+  text-align: left;
+  border-bottom: 1px solid var(--color-main);
+  padding: 0.5rem;
+  display: none;
+}
+
+#counter {
+  min-width: 575px;
+}
+#collapse-open {
+  display: block;
+}
+.counter-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+#counter .title h1 {
+  color: var(--color-secondary);
+}
+.counter-container * {
+  width: 100%;
+  align-self: center;
+  margin: 0;
+  margin-left: 1rem;
+}
+
+.counter-container p {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.counter-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.counter-item {
+  margin-top: 1rem;
+  display: flex;
+}
+
+#team {
+  height: 15rem;
+}
+#team .title h1 {
+  color: var(--color-main);
+}
+
 /* PC */
 @media (min-width: 768px) {
   section > div {
@@ -156,7 +351,7 @@ h2 {
 
   .row {
     position: relative;
-    width: 90%;
+    width: 80%;
     height: 15rem;
     margin: 0 auto;
   }
@@ -165,19 +360,51 @@ h2 {
     position: absolute;
     width: 55%;
     height: 10rem;
+    box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.503);
+    transition: 1s;
   }
 
+  .row:nth-child(2) .card:last-child {
+    height: 16rem;
+  }
+
+  .row:nth-child(3) .card:first-child {
+    height: 26rem;
+  }
+  .card:hover {
+    box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.703);
+    transition: 1s;
+  }
+
+  .row:first-child .card .title {
+    grid-row: span 2;
+  }
+
+  .row:first-child .card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    gap: 0.5rem;
+  }
+
+  .row {
+    transition: opacity 1s ease;
+  }
+
+  .row:nth-child(3) .card:last-child {
+    width: 50%;
+  }
   .card:nth-child(odd) {
     animation: slide-right ease 1s forwards;
-    top: calc(var(--n) * -1rem);
-    right: calc(var(--n) * -1rem);
+    top: calc(var(--y) * 8rem);
+    right: calc(var(--x) * -3rem);
     z-index: 1;
   }
 
   .card:nth-child(even) {
     animation: slide-left ease 1s forwards;
-    bottom: calc(var(--n) * -1rem);
-    left: calc(var(--n) * -1rem);
+    bottom: calc(var(--y) * 2rem);
+    left: calc(var(--x) * -3rem);
     background-color: var(--color-main);
   }
 
@@ -190,5 +417,12 @@ h2 {
       var(--color-main) 70%,
       var(--color-secondary) 70%
     );
+  }
+  #team {
+    width: 40%;
+    height: 18rem;
+  }
+  #counter {
+    height: 15rem;
   }
 }
